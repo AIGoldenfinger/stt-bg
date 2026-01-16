@@ -6,7 +6,7 @@ from pathlib import Path
 import tempfile
 
 WHISPER_MODELS = ["tiny", "base", "small", "medium", "large", "large-v2", "large-v3"]
-LANGUAGES = ["auto"] + whisper.tokenizer.LANGUAGES.keys()
+LANGUAGES = ["auto"] + list(whisper.tokenizer.LANGUAGES.keys())
 
 def extract_audio(video_path):
     """Extract audio from video file using ffmpeg"""
